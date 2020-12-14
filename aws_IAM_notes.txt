@@ -1,0 +1,5 @@
+---IAM Credential Report---
+Shows when passwords are used
+shows when access keys were made and last used
+
+Go into IAM and you can download from tab 'credential report'
