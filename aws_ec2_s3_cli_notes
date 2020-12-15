@@ -1,0 +1,26 @@
+---EC2/S3 CLI instructions---
+running
+>>> aws s3 mb s3://[url name] 
+!would make an S3 bucket!
+
+to setup credentials run
+
+>>> aws configure
+!will need access key id and secret access key!
+
+to see s3 buckets in current region
+
+>>>aws s3 ls
+
+to copy/upload file to s3 bucket
+
+>>>aws s3 cp  [file] s3://[bucket-url]
+
+to see and change credentials
+
+>>>cd .aws
+!this directory contains a credentials file!
+
+can attach role to ec2 under actions->instance settings
+
+using roles is more secure than using credentials to connect to ec2 from the CLI

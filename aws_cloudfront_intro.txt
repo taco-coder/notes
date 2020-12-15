@@ -1,0 +1,18 @@
+---cloud front intro---
+cloudfront is a content delivery network (CDN)
+
+Edge locations act as caches for files that are stored at a different bucket in a different region to save time
+
+first user gets latency to download the file from origin to cache
+
+TTL (time to live) sets how long the file stays cached before being deleted from cache. usually 24-48 hours by default (in seconds)
+
+web distribution-typically used for websites
+
+takes time to create a distribution (about an hour)
+
+connects to S3 buckets
+
+origin path can be used if you want to use a specific folder in a bucket; leave empty if you want to use the whole bucket
+
+

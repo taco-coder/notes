@@ -1,0 +1,14 @@
+---AWS autoscaling---
+can create an autoscaling group using ec2 images (AMIs)
+
+ec2 sidebar scroll down to autoscaling groups
+
+need to first create launch configuration and can click on my AMI
+
+assign appropriate security group
+
+create autoscaling group using newly created launch configuration
+
+automatically creates and spread ec2 instances across all selected AZ
+
+scaling policies can change how many instances you can create and the rules for creating new instances

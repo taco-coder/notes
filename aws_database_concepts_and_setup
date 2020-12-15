@@ -1,0 +1,32 @@
+---AWS Databases---
+RDS (relational database on AWS) allows deployment across multiple AZ (availability zones) for recovery and read replicas for performance
+
+Recovery: automatically point connection string from ec2 instance to database in an AZ. If one AZ goes down, it automatically connects to the twin database in another AZ
+
+Performance: ec2 instance writes to primary database who then writes to a replica database. If primary goes down though, you lose access to DB. Can setup so you write to primary database and reads from replica database. Can have up to 5 replica databases to read from
+
+Nonrelational databases are similar in content as relational databases (have tables, rows, and key/value pairs)
+-columns in table can vary and will not effect other rows in database
+
+AWS uses DynamoDB
+
+Data warehousing is used for business intelligence. Used to pull in very large and complex datasets and usually used by management to do queries on data such as current performance vs targets, etc.
+
+Data Warehousing databases use a different type of architecture when compared to the above databases
+AWS uses Redshift
+
+Elasticache can deploy and scale in-memory cach in the cloud. Allows web apps to get info quicker than using databases. Uses 2 engines: Memcached and Redis.
+
+-Setting up an RDS instance with an EC2 webserver-
+create a new RDS DB
+
+go to vpc default security group (or security group of whatever vpc you're using) and add a rule to allow whatever database management (mysql/aurora, etc) language to communicate. Set source to 
+the security group being used for webserver. This will allow mysql traffic to our default vcp security group from our webserver security group. 
+
+create ec2 instance and set security group as whatever webserver security group you're using
+
+when setting up database on site, the host is the database endpoint found in the RDS database Connectivity and Security
+
+can set the DNS of site using Elastic Loadbalancer to prevent needing to use an IP address to get to site
+
+to create an image of the site to allow autoscaling, go to ec2, go to actions->create image, then name it 
