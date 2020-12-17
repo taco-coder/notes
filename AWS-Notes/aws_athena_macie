@@ -1,0 +1,7 @@
+---Athena and Macie---
+
+Athena can be used to run serverless SQL queries on data stored in S3 
+
+Macie is an AI service that discovers, classify, and protects sensitive data like personal info in S3
+
+

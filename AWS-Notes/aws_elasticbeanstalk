@@ -1,0 +1,8 @@
+---Elastic Beanstalk---
+provisions ec2 instances, security groups, load balancers, and a bunch of other resources quickly
+
+under config, you can change instance types, load balancers, etc
+
+deploys applications to the cloud
+
+

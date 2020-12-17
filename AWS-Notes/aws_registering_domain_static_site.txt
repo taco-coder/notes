@@ -1,0 +1,20 @@
+---Registering a domain name for a static site---
+AWS uses route53 to register domains
+
+make sure you have a bucket of the exact same name of the domain in S3
+
+got to properties of the and set static website hosting to host a site and tell it the names of the index and error files
+
+edit public access settings and uncheck 'block all public access' because we want people to be able to access our site
+
+change bucket policy under bucket permissions to be public
+
+add our index and error html files to our bucket
+
+access should say public
+
+once created, go into hosted zone and click 'create record set'
+
+we can enable 'alias' and then select our appropriate S3 bucket under targets and then hit create
+
+creates a serverless static site this way

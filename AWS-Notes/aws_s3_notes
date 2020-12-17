@@ -1,0 +1,16 @@
+---S3---
+S3 is for object files only
+
+'buckets' are just folders where you can store files
+
+bucket names are universal namespace so they have to be unique
+
+Objects consist of
+    Key: name of object
+    value: the data that makes up the file
+    version ID: version number of that file
+    metadata: data about data in the file
+
+can enable MFA to delete objects
+
+

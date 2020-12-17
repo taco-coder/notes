@@ -1,0 +1,8 @@
+---AWS WAF & AWS Shield---
+WAF, web application firewall
+    -protects from common exploits and what not
+    -works on OSI layer 7
+
+Shield protects from ddos attacks
+    -automatically activated standard on accounts but can upgrade to to advanced
+

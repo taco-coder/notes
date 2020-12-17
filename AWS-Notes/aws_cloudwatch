@@ -1,0 +1,6 @@
+---cloudwatch---
+monitoring service to monitor resources, services, and application performances
+
+have host level metrics: CPU, network, disk.
+
+Can create custom scripts to monitor other resources such as RAM

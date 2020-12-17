@@ -1,0 +1,10 @@
+---systems manager---
+allows you to manage EC2 instances at scale
+
+multiple instances are called a fleet
+
+AWS systems manager lets you run commands across all ec2 instances
+
+found under management in the console
+
+
