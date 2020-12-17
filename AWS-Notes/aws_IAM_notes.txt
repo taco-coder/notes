@@ -3,3 +3,26 @@ Shows when passwords are used
 shows when access keys were made and last used
 
 Go into IAM and you can download from tab 'credential report'
+
+---IAM---
+Under services->security
+
+can create groups with appropriate permissions and add users to groups (best practice for cleaner management)
+
+BEST PRACTICE: use root account to make IAM accounts for every user, even admin. Should not use root account for anything other than creating and managing user accounts
+
+can enable MFA for root account; if you lose access to MFA app then you need to contact AWS support
+
+Tons of different job functions and permissions for every type of user account
+
+when granting programmatic access, you only see the credentials once so be sure to download the .csv not to lose the info
+
+under policies, you can see the json notations of the policies 
+
+can create password policy: length, special characters, reuse, and how often it needs to be updated
+
+if Access key is lost for user, we can deactivate the old key and create a new key for them
+
+can create Roles to allow one AWS service to use another AWS service ie allowing EC2 to have admin access to S3
+
+
