@@ -13,4 +13,55 @@ Objects consist of
 
 can enable MFA to delete objects
 
+Transfer acceleration enables fast and easy transfer over the Amazon network to edge locations vs using the regular Internet
+
+S3 buckets are private by default
+
+Can have version control enabled and have server side encryption
+
+Can setup access control using bucket policies and Access Control Lists
+
+Can have logs of who accesses buckets and makes what changes
+
+Encryption in transit is acheived by SSL/TLS
+
+Encryption At Rest (Server Side):
+    S3 managed keys - SSE-S3
+    Aws Key management service
+    Server side encryption with customer provided Keys
+
+Client side encryption: upload encrypted files
+
+Encryption can be found under Properties in the bucket settings
+
+Once versioning is enabled, it can't be disabled. Only suspended.
+
+Versioning supports MFA to delete objects
+
+Each version of an uploaded file is private by default. You need to make them public file by file; individually.
+
+Can create life cycle rules for each bucket to outline what happens to files after a defined period of time ie transition to different storage tiers if not accessed after X days, delete after Y days, etc
+
+S3 Object Lock: Write Once, Read Many (WORM)
+    Prevents objects being deleted or modified without required permissions
+    Governance mode: users can alter a file without special permissions
+    Compliance mode: can't be alter by ANY user, even root account. It's locked for the duration of the protection period (defined at creation)
+    Legal hold: prevents an object version from being overwritten or deleted. No protection period; can be removed and added by any user who has the 
+    s3:PutObjectLegalHold permission
+    
+3 ways to share S3 bucket access
+    Using bucket policies and IAM access (programmatic access only)
+    Using Bucket ACLs and IAM access to individual objects (programmatic access only)
+    Cross account access through IAM users using Roles (programmatic AND console access)
+
+Cross Region Replication
+    under Management in bucket settings, there is a replication rules card
+    need to create destination bucket before enabling cross region replication
+    only starts working with new objects from point of creation, won't replicate past objects in the source bucket
+    doesn't replicate source object past versions and doesn't replicate source object viewership permissions ie a public file in source bucket in US will 
+    default to private in destination bucket in Brazil
+
+S3 Transfer Acceleration
+    Uses Cloudfront Edge Network to accelerate uploads to S3; faster than regular Internet transfer because it uses AWS backbone network
+    
 
