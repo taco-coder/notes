@@ -1,10 +1,10 @@
-#IAM Credential Report
+# IAM Credential Report
 Shows when passwords are used
 shows when access keys were made and last used
 
 Go into IAM and you can download from tab 'credential report'
 
-#IAM
+# IAM
 Under services->security
 
 can create groups with appropriate permissions and add users to groups (best practice for cleaner management)
@@ -26,20 +26,20 @@ if Access key is lost for user, we can deactivate the old key and create a new k
 can create Roles to allow one AWS service to use another AWS service ie allowing EC2 to have admin access to S3
 
 
-#Directory Service
+# Directory Service
     Family of managed services that connect AWS resources with on-premises Active Directory (AD). Standalone directory in the cloud that uses existing corporate credentials
     
-    ###Active Directory:
+    ### Active Directory:
         -On-premises directory service
         -hierarchical database of users, groups, computers
         -can apply group policies
 
 
-#Policies
-    ###Amazon Resource Name (ARN):
+# Policies
+    ### Amazon Resource Name (ARN):
         -Define the name for every service available through AWS
         -ARNs begin with: 
-'''
+'''json
                 arn:partition:service:region:account_id:[resource 
                                                          OR 
                                                          resource_type/resource 
@@ -52,7 +52,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                                                          OR
                                                          resource_type:resource:qualifier
 '''
-    ###Examples of ARN:
+    ### Examples of ARN:
         1. arn:aws:iam::123456789012:user/mark
         2. arn:aws:s3:::my_awesome_bucket/image.png
         3. arn:aws:dynamodb:us-east-1:123456789012:table/orders
@@ -65,7 +65,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
         -Identity policies
         -Resource policies
     Policies are just a list of statements in a JSON file:
-'''json
+''' json
         {
             "Version":"2020-12-21"
             "Statement": [
