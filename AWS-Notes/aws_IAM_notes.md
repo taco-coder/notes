@@ -29,7 +29,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
 # Directory Service
     Family of managed services that connect AWS resources with on-premises Active Directory (AD). Standalone directory in the cloud that uses existing corporate credentials
     
-    ### Active Directory:
+    ## Active Directory:
         -On-premises directory service
         -hierarchical database of users, groups, computers
         -can apply group policies
@@ -39,7 +39,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
     ### Amazon Resource Name (ARN):
         -Define the name for every service available through AWS
         -ARNs begin with: 
-'''json
+'''
                 arn:partition:service:region:account_id:[resource 
                                                          OR 
                                                          resource_type/resource 
@@ -65,7 +65,8 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
         -Identity policies
         -Resource policies
     Policies are just a list of statements in a JSON file:
-''' json
+
+'''
         {
             "Version":"2020-12-21"
             "Statement": [
@@ -80,9 +81,9 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                 },           
             ]        
         }
-
+'''
         Each statement matches an AWS API request
-        Example:
+'''
         {
             "Version":"2020-12-21"
             "Statement": [
