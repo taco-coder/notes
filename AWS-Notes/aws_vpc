@@ -1,7 +1,5 @@
 ---VPC---
-Virtual private cloud: lets you provision isolated section of the AWS cloud where you can launch AWS resources in a virtual network
+    Virtual Private Cloud lets you provision a logically isolated section of AWS cloud. You control the IP address range, subnets, and config of network gateways and route tables
+    Can create a public facing subnet for your webservers and place backend facing systems such as DBs and application servers in private facing subnets with no Internet access.
 
-EX. you can create a public-facing network zone for webservers that has access to the internet and place backend systems (DBs or Application servers) in a private network zone with
-no internet access
-
-
+    

@@ -1,3 +1,56 @@
+---EC2---
+Compute service that provides resizable compute capacity in the cloud in minutes
+
+Different instance types have different use cases
+
+Subnets are completely randomized. US east 1a can be different for one account when compared to another account
+
+when you generate your private key, create a public key to use for ssh
+
+on Windows
+>>>ssh-keygen -y -f [key pair name].pem > [keypair name].pub
+
+
+
+
+
+---building a web server on ec2 instance---
+1-get public ip
+
+2-connect to instance
+
+>>>yum install httpd (apache)
+
+>>>service httpd start
+starts apache service
+
+to start httpd service on reboot
+>>>chkconfig on
+
+/var/www/html is the root directory for the website
+any files in the directory are visible when visiting the ip (this is where we store the files for our website
+
+under advanced details in configure instance step, can run a script to automate setup of instance on creation
+
+---using an elastic load balancer---
+scroll down to loadbalancers in ec2 side menu
+
+can take 5-10 minutes to create
+
+when using with ec2, pay attention to availability zone. if creating a second server, use a different AZ than the first
+
+we can use the load balancer DNS to go to our webpage instead of the ec2 instance IP. If an instance goes down or reboots, we don't need to worry about the ip address
+
+under the target groups settings we can add or remove instances to a load balancer
+
+application load balancers-use for media content and applications; 7 layer OSI model 
+
+network load balancers-extreme performance/static ip address
+
+
+
+
+
 ---EC2 CLI instructions---
 running
 >>> aws s3 mb s3://[url name] 
