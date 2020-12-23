@@ -80,8 +80,8 @@ Using a role with programmatic access is more secure than using credentials to c
 
 # ENI vs EN vs EFA
 #### ENI: Elastic Network interface
-- virtual network card attached to EC2 instance
-- allows more public and private IP addresses
+- Virtual network card attached to EC2 instance
+- Allows more public and private IP addresses
 - Use cases:
     - Create a management network
     - Use network and security appliances in your VPC
@@ -158,7 +158,7 @@ What are the different services we can use to achieve HPC on AWS?
     - Elastic Network Adapters (device that enables EN).
     - Elastic Fabric Adapters (see EFA above).
 
-3. Storage
+### 3. Storage
 - Instance-attached storage
     - EBS: Scale up to 64,000 IOPS with Provisioned IOPS (PIOPS).
     - Instance Store: Scale to millions of IOPS; low latency.
@@ -167,7 +167,7 @@ What are the different services we can use to achieve HPC on AWS?
     - EFS: Elastic File System scales IOPS based on total size.
     - FSx for Lustre: HPC-optimized distributed file system; millions of IOPS.
 
-4. Orchestration and Automation
+### 4. Orchestration and Automation
 - AWS Batch:
     - Enables developers to run hundreds of thousands of batch computing jobs on AWS.
     - Supports multi-node parallel jobs, which allows you to run a single job that spans multiple EC2 instances.
