@@ -7,7 +7,8 @@ Subnets are completely randomized. `us-east-1b` can be different for one account
 
 When you generate your private key, create a public key to use for `ssh`
 
-On Windows
+On Windows:
+
 `ssh-keygen -y -f [key pair name].pem > [keypair name].pub`
 
 When using security groups, setting an inbound rule (ssh allowed, http allowed, etc) automatically creates an outbound rule
@@ -20,18 +21,20 @@ Setup a new security group to assign to the instance and allow HTTP @ port 80 to
 
 2. Connect to instance
 
-1. ###### Install Apache
+##### Install Apache
 `yum install httpd`
-2. ###### Start Apache Service
+
+##### Start Apache Service
 `service httpd start`
 
-- ###### To start httpd service on reboot
->>>chkconfig on
+##### To start httpd service on reboot
+`chkconfig on`
 
-/var/www/html is the root directory for the website
-any files in the directory are visible when visiting the ip (this is where we store the files for our website
+`/var/www/html` is the root directory for the website.
 
-under advanced details in configure instance step, can run a script to automate setup of instance on creation
+Any files in the directory are visible when visiting the ip (this is where we store the files for our website).
+
+Under `Advanced Details` in `Configure Instance` step, can run a bootstrap script to automate setup of instance on creation.
 
 
 
