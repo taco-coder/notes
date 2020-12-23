@@ -8,7 +8,9 @@ EX: `10.0.1.0/24`
 
 
 `.1` at the end respresents the host on that network.
+
 ---
+
 The subnet mask lets you know which bits are used for the address:
 
 
