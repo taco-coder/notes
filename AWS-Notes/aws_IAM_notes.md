@@ -52,19 +52,21 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                                                          OR
                                                          resource_type:resource:qualifier
 ```
+
     Examples of ARN:
         1. arn:aws:iam::123456789012:user/mark
         2. arn:aws:s3:::my_awesome_bucket/image.png
         3. arn:aws:dynamodb:us-east-1:123456789012:table/orders
         4. arn:aws:ec2:us-east-1:123456789045:instance/*
 
-        **multiple colons following each other are omitted values because ARN is global. Example 1 is a user account, so region is not needed.**
+        ** multiple colons following each other are omitted values because ARN is global. Example 1 is a user account, so region is not needed. **
         Example 2 is an S3 bucket, no region or account id are associated with it.
 
     Policies are JSON documents that define permissions. 2 types of policies.
         - Identity policies
         - Resource policies
     Policies are just a list of statements in a JSON file:
+ 
 ```
         {
             "Version":"2020-12-21"
@@ -81,7 +83,11 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
             ]        
         }
 ```
+
+
         Each statement matches an AWS API request
+
+
 ```json
         {
             "Version":"2020-12-21"
@@ -107,6 +113,8 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
             ]  //end statement block     
         }  //end file          
 ```
+
+
         2 types of policies: AWS managed policies and customer managed policies
             - AWS managed policies are created by AWS for convenience
             - Customer managed policies are policies made by you and can be edited for specific purposes
