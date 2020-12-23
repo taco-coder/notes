@@ -17,9 +17,9 @@ Can assign multiple security groups to an ec2 instance
 # Building a web server on EC2 instance
 Setup a new security group to assign to the instance and allow HTTP @ port 80 to allow web traffic
 
-1. Get public ip
+1. Get public IP
 
-2. Connect to instance
+2. Connect to instance and run the commands below
 
 ##### Install Apache
 `yum install httpd`
@@ -34,53 +34,43 @@ Setup a new security group to assign to the instance and allow HTTP @ port 80 to
 
 Any files in the directory are visible when visiting the ip (this is where we store the files for our website).
 
-Under `Advanced Details` in `Configure Instance` step, can run a bootstrap script to automate setup of instance on creation.
+Under `Advanced Details` in `Configure Instance` step, you can run a bootstrap script to automate setup of instance on creation.
 
+# Using an elastic load balancer
+Scroll down to `Loadbalancers` in the EC2 side menu. It can take 5-10 minutes to create. When using with ec2, pay attention to availability zone. If creating a second server, use a different AZ than the first server.
+We can use the load balancer DNS to go to our webpage instead of the EC2 instance IP. If an instance goes down or reboots, we don't need to worry about the IP address. Under the target groups settings, we can add or remove instances to a load balancer.
 
+#### Types of Load Balancers
+- Application load balancers are used for media content and applications
 
+- Network load balancers are used when we need extreme performance/static IP address
 
+# EC2 CLI instructions
+To setup credentials run:
 
----using an elastic load balancer---
-scroll down to loadbalancers in ec2 side menu
+`aws configure`
 
-can take 5-10 minutes to create
+**You will need access key id and secret access key**
 
-when using with ec2, pay attention to availability zone. if creating a second server, use a different AZ than the first
+All we need to do is run:
 
-we can use the load balancer DNS to go to our webpage instead of the ec2 instance IP. If an instance goes down or reboots, we don't need to worry about the ip address
+`aws [service name]`
 
-under the target groups settings we can add or remove instances to a load balancer
+The following command would make an S3 bucket from an EC2 instance:
 
-application load balancers-use for media content and applications; 7 layer OSI model 
+`aws s3 mb s3://[url name]`
 
-network load balancers-extreme performance/static ip address
+To see S3 buckets in your current region:
 
+`aws s3 ls`
 
+To copy/upload a file to an S3 bucket:
+`aws s3 cp  [file] s3://[bucket-url]`
 
+To see and change credentials:
 
-
----EC2 CLI instructions---
-to setup credentials run
->>> aws configure
-!will need access key id and secret access key!
-
-all we need to do is run
->>>aws [service name]
-
-r`unning
->>> aws s3 mb s3://[url name] 
-!would make an S3 bucket!
-
-
-to see s3 buckets in current region
->>>aws s3 ls
-
-to copy/upload file to s3 bucket
->>>aws s3 cp  [file] s3://[bucket-url]
-
-to see and change credentials
->>>cd .aws
-!this directory contains a credentials file!
+`cd /.aws`[^1]
+[^1]: This directory contains a credentials file.
 
 can attach role to ec2 under actions->security->manage IAM 
 
