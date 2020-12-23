@@ -17,7 +17,7 @@ Tons of different job functions and permissions for every type of user account
 
 when granting programmatic access, you only see the credentials once so be sure to download the .csv not to lose the info
 
-under policies, you can see the 'json' notations of the policies 
+under policies, you can see the ' json ' notations of the policies 
 
 can create password policy: length, special characters, reuse, and how often it needs to be updated
 
@@ -29,14 +29,14 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
 # Directory Service
     Family of managed services that connect AWS resources with on-premises Active Directory (AD). Standalone directory in the cloud that uses existing corporate credentials
     
-    #### Active Directory:
+    Active Directory:
         - On-premises directory service
         - hierarchical database of users, groups, computers
         - can apply group policies
 
 
 # Policies
-    #### Amazon Resource Name (ARN): ####
+     Amazon Resource Name (ARN): ####
         - Define the name for every service available through AWS
         - ARNs begin with: 
 
@@ -52,7 +52,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                                                          OR
                                                          resource_type:resource:qualifier
 
-    ### Examples of ARN:
+    Examples of ARN:
         1. arn:aws:iam::123456789012:user/mark
         2. arn:aws:s3:::my_awesome_bucket/image.png
         3. arn:aws:dynamodb:us-east-1:123456789012:table/orders
