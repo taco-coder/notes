@@ -69,7 +69,8 @@ To copy/upload a file to an S3 bucket:
 
 To see and change credentials:
 
-`cd /.aws`[^1]
+`cd /.aws` [^1]
+
 [^1]: This directory contains a credentials file.
 
 can attach role to ec2 under actions->security->manage IAM 
