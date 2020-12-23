@@ -80,23 +80,23 @@ Using a role with programmatic access is more secure than using credentials to c
 
 # ENI vs EN vs EFA
 #### ENI: Elastic Network interface
-- Virtual network card attached to EC2 instance
-- Allows more public and private IP addresses
+- Virtual network card attached to EC2 instance.
+- Allows more public and private IP addresses.
 - Use cases:
-    - Create a management network
-    - Use network and security appliances in your VPC
-    - Create dual-homed instances with workloads/roles on distinct subnets
-    - Create a low-budget, high availability solution
+    - Create a management network.
+    - Use network and security appliances in your VPC.
+    - Create dual-homed instances with workloads/roles on distinct subnets.
+    - Create a low-budget, high availability solution.
 
 #### EN: Enhanced networking
-- Uses single root I/O virtualization (SR-IOV) to provide high performance networking capabilities on supported instance types
-- Enhanced networking provides higher bandwidth, higher packet per second performance, and consistently lower inter-instance latencies. No additional charge for using it
+- Uses single root I/O virtualization (SR-IOV) to provide high performance networking capabilities on supported instance types.
+- Enhanced networking provides higher bandwidth, higher packet per second performance, and consistently lower inter-instance latencies. No additional charge for using it.
 - Use cases:
-    - When you want faster network performance
+    - When you want faster network performance.
 
 #### EFA: Elastic Fabric Adapter
-- Network device that you can attach to your EC2 instance to accelerate High Performance Computing (HPC) and machine learning applications
-- Provides lower and more consistent latency and higher throughput than TCP traditionally used in cloud-based HPC systems
+- Network device that you can attach to your EC2 instance to accelerate High Performance Computing (HPC) and machine learning applications.
+- Provides lower and more consistent latency and higher throughput than TCP traditionally used in cloud-based HPC systems.
 - Can use OS-bypass to enable HPC and machine learning apps to bypass the OS kernel and to communicate directly with EFA device. Results in high speed with low latency; only supported in Linux.
     
 
