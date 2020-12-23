@@ -40,6 +40,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
      Amazon Resource Name (ARN):
         - Define the name for every service available through AWS
         - ARNs begin with: 
+
 ```
                 arn:partition:service:region:account_id:[resource 
                                                          OR 
@@ -51,8 +52,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                                                          OR
                                                          resource_type:resource
                                                          OR
-                                                         resource_type:resource:qualifier
-```
+                                                         resource_type:resource:qualifier ```
 
     Examples of ARN:
         1. arn:aws:iam::123456789012:user/mark
