@@ -2,7 +2,7 @@
 Shows when passwords are used
 shows when access keys were made and last used
 
-Go into IAM and you can download from tab 'credential report'
+Go into IAM and you can download from tab `credential report`
 
 # IAM
 Under services->security
@@ -29,7 +29,8 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
 # Directory Service
     Family of managed services that connect AWS resources with on-premises Active Directory (AD). Standalone directory in the cloud that uses existing corporate credentials
     
-    Active Directory:
+    ### Active Directory
+
         - On-premises directory service
         - hierarchical database of users, groups, computers
         - can apply group policies
