@@ -14,7 +14,7 @@ On Windows:
 When using security groups, setting an inbound rule (ssh allowed, http allowed, etc) automatically creates an outbound rule
 
 Can assign multiple security groups to an ec2 instance
-# Building a web server on EC2 instance
+# Building a web server on an EC2 instance
 Setup a new security group to assign to the instance and allow HTTP @ port 80 to allow web traffic
 
 1. Get public IP
@@ -32,7 +32,7 @@ Setup a new security group to assign to the instance and allow HTTP @ port 80 to
 
 `/var/www/html` is the root directory for the website.
 
-Any files in the directory are visible when visiting the ip (this is where we store the files for our website).
+Any files in the directory are visible when visiting the IP/DNS (this is where we store the files for our website).
 
 Under `Advanced Details` in `Configure Instance` step, you can run a bootstrap script to automate setup of instance on creation.
 
