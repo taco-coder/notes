@@ -1,8 +1,0 @@
----S3 vs EBS vs EFS---
-S3 is for object files only
-
-EBS is Elastic Block Storage. Block storage volume that can be used with EC2 instances. Can be used to install OSes and DBs
-
-EFS is Elastic File System. No set size on EFS. It scales as you use it. EBS does not automatically adjust.
-
-
