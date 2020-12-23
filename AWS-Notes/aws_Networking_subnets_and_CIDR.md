@@ -24,6 +24,8 @@ a total of 254 host addresses. Address 0 and 255 are reserved.
 EX: Could take the 254 hosts addresses on `10.0.1.0/24` and 
 split them into 2 subnets: 
 
+| Subnet 1 | Subnet 2 |
+| -------- | -------- | 
 | CIDR: `10.0.1.0/25` | CIDR: `10.0.1.128/25` |
 | Subnet: `255.255.255.128`	| Subnet: `255.255.255.128` |
 | Host addresses: 1-127* | Host addresses: 129-254* |
