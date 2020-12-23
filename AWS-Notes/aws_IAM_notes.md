@@ -17,7 +17,7 @@ Tons of different job functions and permissions for every type of user account
 
 when granting programmatic access, you only see the credentials once so be sure to download the .csv not to lose the info
 
-under policies, you can see the ' json ' notations of the policies 
+under policies, you can see the `json` notations of the policies 
 
 can create password policy: length, special characters, reuse, and how often it needs to be updated
 
@@ -36,10 +36,10 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
 
 
 # Policies
-     Amazon Resource Name (ARN): ####
+     Amazon Resource Name (ARN):
         - Define the name for every service available through AWS
         - ARNs begin with: 
-
+```
                 arn:partition:service:region:account_id:[resource 
                                                          OR 
                                                          resource_type/resource 
@@ -51,7 +51,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                                                          resource_type:resource
                                                          OR
                                                          resource_type:resource:qualifier
-
+```
     Examples of ARN:
         1. arn:aws:iam::123456789012:user/mark
         2. arn:aws:s3:::my_awesome_bucket/image.png
@@ -65,7 +65,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
         - Identity policies
         - Resource policies
     Policies are just a list of statements in a JSON file:
-
+```
         {
             "Version":"2020-12-21"
             "Statement": [
@@ -80,9 +80,9 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                 },           
             ]        
         }
-
+```
         Each statement matches an AWS API request
-
+```json
         {
             "Version":"2020-12-21"
             "Statement": [
@@ -106,7 +106,7 @@ can create Roles to allow one AWS service to use another AWS service ie allowing
                 },  //end statement 1         
             ]  //end statement block     
         }  //end file          
-
+```
         2 types of policies: AWS managed policies and customer managed policies
             - AWS managed policies are created by AWS for convenience
             - Customer managed policies are policies made by you and can be edited for specific purposes
