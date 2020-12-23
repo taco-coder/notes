@@ -9,7 +9,7 @@ Under services->security
 
 can create groups with appropriate permissions and add users to groups (best practice for cleaner management)
 
-BEST PRACTICE: use root account to make IAM accounts for every user, even admin. Should not use root account for anything other than creating and managing user accounts
+***BEST PRACTICE***: use root account to make IAM accounts for every user, even admin. Should not use root account for anything other than creating and managing user accounts
 
 can enable MFA for root account; if you lose access to MFA app then you need to contact AWS support
 
@@ -57,12 +57,13 @@ arn:partition:service:region:account_id:[resource
 ```
 
 Examples of ARN:
-1. arn:aws:iam::123456789012:user/mark
-2. arn:aws:s3:::my_awesome_bucket/image.png
-3. arn:aws:dynamodb:us-east-1:123456789012:table/orders
-4. arn:aws:ec2:us-east-1:123456789045:instance/*
+1. `arn:aws:iam::123456789012:user/mark`
+2. `arn:aws:s3:::my_awesome_bucket/image.png`
+3. `arn:aws:dynamodb:us-east-1:123456789012:table/orders`
+4. `arn:aws:ec2:us-east-1:123456789045:instance/*`
 
-**multiple colons following each other are omitted values because ARN is global. Example 1 is a user account, so region is not needed.**
+**Multiple colons following each other are omitted values because ARN is global. Example 1 is a user account, so region is not needed.**
+
 Example 2 is an S3 bucket, no region or account id are associated with it.
 Policies are JSON documents that define permissions. 2 types of policies.
 - Identity policies
@@ -110,11 +111,9 @@ Each statement matches an AWS API request
         ]  //end statement block     
 }  //end file          
 ```
-
-
-        2 types of policies: AWS managed policies and customer managed policies
-            - AWS managed policies are created by AWS for convenience
-            - Customer managed policies are policies made by you and can be edited for specific purposes
+2 types of policies: AWS managed policies and customer managed policies
+- AWS managed policies are created by AWS for convenience
+- Customer managed policies are policies made by you and can be edited for specific purposes
         
 
         
