@@ -29,6 +29,7 @@ chkconfig httpd on
 service httpd start
 ```
 This script updates the instance, installs php and apache, and then creates a new html file in our directory `/var/www/html`. It then downloads and installs Wordpress and gets access to S3 buckets. It renames the htaccess file to be hidden and the starts the apache service. 
+
 ---
 When we travel to our public IP, we'll see the Wordpress setup prompt. Our `Database Host` should be changed from `localhost` to our DB endpoint found in the RDS DB menu. From there, you can follow the steps to create our new Wordpress site.
 
@@ -37,6 +38,7 @@ When connected to the EC2 instance over SSH, to have any user uploaded images au
 For redundancy we can also copy our code and all our content to an S3 bucket that way if we lose an EC2 instance, we can run `aws s3 cp --recursive /var/www/html s3://[YOUR CODE BUCKET NAME HERE]`.
 To allow URL rewrites we need to modify .htaccess and update the Cloudfront URL in the rewriterule line to our URL for our Cloudfront distribution we created. After the modification, we need to sync our S3 bucket with whats currently in `/var/www/html`.
 `aws s3 sync /var/www/html s3://[YOUR CODE BUCKET NAME HERE]`
+
 ---
 We need to allow URL rewrites in Apache. 
 `cd /etc/httpd/conf`
