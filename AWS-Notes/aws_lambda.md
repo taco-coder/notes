@@ -17,3 +17,7 @@ It runs in response with HTTP requests using AWS API or SDK.
 - ***Cheap.***
 #### Lambda in Action
 Lambda can be found in Alexa and Amazon Echo.
+
+---
+
+In the function dashboard, we can modify our lambda function in the IDE below and use the `Designer` to configure a trigger for our lambda function. 

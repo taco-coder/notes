@@ -76,7 +76,11 @@ You can attach a role to EC2 under `Actions->Security->Manage IAM`
 
 Using a role with programmatic access is more secure than using credentials to connect to EC2 from the CLI.
 
+To automate/schedule commands on an EC2 instance:
+`cd /etc`
 
+`nano crontab`
+`crontab` is a file that is used like a task scheduler that can set commands to be run every minute, hour, day, month, specific day, etc
 
 # ENI vs EN vs EFA
 #### ENI: Elastic Network interface

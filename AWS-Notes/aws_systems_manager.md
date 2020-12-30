@@ -1,6 +1,5 @@
 # Systems Manager
 Service that allows you to manage EC2 instances at scale.
-
 - Multiple instances are called a fleet.
 
 
